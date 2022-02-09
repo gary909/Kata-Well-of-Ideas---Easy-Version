@@ -8,7 +8,13 @@ function well(x){
             badIdea = badIdea + 1;
         }
     }
-    return "Good Ideas=" + goodIdea + " - Bad Ideas= " + badIdea;
+    if (goodIdea > 2) {
+        return "I smell a series!"
+    } else if (goodIdea >= 1) {
+        return "Publish!"
+    } else {
+        return "Fail!"
+    }
 }
 
 console.log(well(['bad', 'bad', 'bad'])); // 'Fail!'
